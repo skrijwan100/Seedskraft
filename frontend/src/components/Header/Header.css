@@ -1,0 +1,70 @@
+.header{
+   height: 34vw;
+   width: 100%;
+   margin: 30px auto;
+   background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
+   background-position: center top 30%;
+   background-size: cover;
+   position: relative;
+   border-radius: 20px;
+}
+.header-contents{
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   gap: 1.5vw;
+   max-width: 50%;
+   left: 6vw;
+   bottom: 10%;
+   animation: fadeIn 2s ease-in-out;
+}
+.header-contents h2{
+   font-weight: 500;
+   color: tomato;
+   font-size: max(4.5vw, 35px);
+}
+.header-contents p{
+   font-weight: 300;
+   color: aliceblue;
+   font-size: 1vw;
+}
+.header-contents button{
+   background: transparent;
+   font-size: 1vw;
+   color: white;
+   border: 1px solid white;
+   padding: 0.5vw 2vw;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.header-contents button:hover{
+   background: white;
+   color: tomato;
+   transition: all 0.3s ease-in-out;
+}
+@media(max-width:1050px){
+  
+   .header-contents{
+      max-width: 45%;
+   }
+   .header-contents h2{
+      font-size: max(5vw, 28px);
+   }
+}
+@media(max-width:750px){
+  
+   .header-contents{
+      max-width: 70%;
+   }
+   .header-contents h2{
+      font-size: max(4vw, 18px);
+   }
+   .header-contents p{
+      display: none;
+   }
+   .header-contents button{
+      padding: 2vw 4vw;
+   }
+}

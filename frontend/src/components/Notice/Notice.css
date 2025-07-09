@@ -1,0 +1,170 @@
+/* NoticeCarousel.css */
+.notice-carousel {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.notice-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f0f5ff 0%, #e6eeff 100%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  min-height: 120px;
+}
+
+.notice-slider {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+}
+
+.notice-item {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  padding: 25px 30px;
+  min-width: 100%;
+  box-sizing: border-box;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.notice-item.active {
+  opacity: 1;
+}
+
+.notice-icon {
+  margin-right: 20px;
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.notice-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.arrow-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.arrow-button:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.arrow-button:active {
+  transform: scale(0.95);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 12px;
+}
+
+.pagination-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-dot:hover {
+  background-color: #94a3b8;
+}
+
+.pagination-dot.active {
+  background-color: #2563eb;
+  transform: scale(1.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .carousel-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .arrow-button {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .notice-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+  
+  .notice-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .notice-text {
+    font-size: 1.05rem;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notice-carousel {
+    padding: 15px;
+  }
+  
+  .notice-container {
+    min-height: 100px;
+  }
+  
+  .notice-item {
+    padding: 20px 15px;
+  }
+  
+  .notice-text {
+    font-size: 0.95rem;
+  }
+  
+  .arrow-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .pagination-dot {
+    width: 10px;
+    height: 10px;
+  }
+}

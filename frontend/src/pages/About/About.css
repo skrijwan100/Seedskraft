@@ -1,0 +1,213 @@
+/* About.css */
+
+.about-section {
+   /* background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); */
+   padding: 60px 0;
+   min-height: 100vh;
+   font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.section-header {
+   text-align: center;
+   margin-bottom: 40px;
+   animation: fadeInDown 1s;
+}
+
+.section-title {
+   font-size: 2.8rem;
+   font-weight: 700;
+   color: whitesmoke;
+   letter-spacing: 2px;
+}
+
+.section-title span {
+   color: #4f8cff;
+   text-shadow: 0 2px 10px #b6ccfe;
+}
+
+.about-grid {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 40px;
+   justify-content: center;
+   align-items: flex-start;
+   max-width: 1100px;
+   margin: 0 auto;
+}
+
+.about-image {
+   flex: 1 1 350px;
+   min-width: 320px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.slideshow-container {
+   position: relative;
+   width: 320px;
+   height: 320px;
+   border-radius: 24px;
+   overflow: hidden;
+   box-shadow: 0 8px 32px rgba(79, 140, 255, 0.15);
+   background: #fff;
+   height: 320px;
+   width: 100%;
+   margin: 30px auto;
+   background: url('https://previews.123rf.com/images/goosefrol/goosefrol1607/goosefrol160700008/62248566-home-plants-vector-graphic-hand-drawing-pattern.jpg') no-repeat center center;
+   background-size: cover;
+   position: relative;
+}
+
+.slide {
+   opacity: 0;
+   /* position: absolute; */
+   height: 100%;
+   width: 100%;
+   margin: 30px auto;
+   background: url('https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-ae3c-622f-970e-5d67581bdcc4/raw?se=2025-06-30T06%3A03%3A48Z&sp=r&sv=2024-08-04&sr=b&scid=8152bb72-0bee-5c9b-85ff-911eb439b6df&skoid=f28c0102-4d9d-4950-baf0-4a8e5f6cf9d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-29T08%3A48%3A43Z&ske=2025-06-30T08%3A48%3A43Z&sks=b&skv=2024-08-04&sig=g7rsDGvbvWANXfVZZrRdn4UEYr8RHgZd1caWq3k1NOc%3D') no-repeat center center;
+   background-size: cover;
+   position: relative;
+   border-radius: 20px;
+   transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.slide.active {
+   opacity: 1;
+   position: relative;
+   z-index: 2;
+   animation: slideIn 1s;
+}
+
+.slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 24px;
+}
+
+.slide-indicators {
+   display: flex;
+   justify-content: center;
+   margin-top: 18px;
+   gap: 10px;
+}
+
+.indicator {
+   width: 14px;
+   height: 14px;
+   border-radius: 50%;
+   background: #c7d2fe;
+   transition: background 0.3s;
+   cursor: pointer;
+   box-shadow: 0 2px 8px #e0e7ff;
+}
+
+.indicator.active {
+   background: #4f8cff;
+   box-shadow: 0 2px 12px #4f8cff55;
+}
+
+.about-content {
+   flex: 2 1 400px;
+   min-width: 340px;
+   background: #000000;  /* Changed to black for better contrast */
+   border-radius: 24px;
+   box-shadow: 0 8px 32px rgba(34, 34, 59, 0.08);
+   padding: 36px 32px;
+   animation: fadeInRight 1.2s;
+}
+
+.content-block p {
+   font-size: 1.13rem;
+   color: aliceblue;
+   margin-bottom: 18px;
+   line-height: 1.7;
+   animation: fadeIn 1.5s;
+}
+
+.stats-grid {
+   display: flex;
+   gap: 32px;
+   margin-top: 32px;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+}
+
+.stat-item {
+   background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+   border-radius: 16px;
+   box-shadow: 0 4px 16px #e0e7ff88;
+   padding: 22px 32px;
+   text-align: center;
+   min-width: 120px;
+   animation: popIn 1.2s;
+}
+
+.stat-number {
+   font-size: 2rem;
+   font-weight: 700;
+   color: #4f8cff;
+   margin-bottom: 6px;
+   letter-spacing: 1px;
+}
+
+.stat-label {
+   font-size: 1rem;
+   color: #22223b;
+   opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+   from { opacity: 0; transform: translateY(-40px);}
+   to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInRight {
+   from { opacity: 0; transform: translateX(40px);}
+   to { opacity: 1; transform: translateX(0);}
+}
+
+@keyframes fadeIn {
+   from { opacity: 0;}
+   to { opacity: 1;}
+}
+
+@keyframes slideIn {
+   from { opacity: 0; transform: scale(0.96);}
+   to { opacity: 1; transform: scale(1);}
+}
+
+@keyframes popIn {
+   0% { opacity: 0; transform: scale(0.8);}
+   80% { opacity: 1; transform: scale(1.05);}
+   100% { opacity: 1; transform: scale(1);}
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+   .about-grid {
+      flex-direction: column;
+      align-items: center;
+   }
+   .about-content {
+      margin-top: 32px;
+      padding: 28px 16px;
+   }
+   .slideshow-container {
+      width: 260px;
+      height: 260px;
+   }
+   .slide-indicators {
+      margin-top: 12px;
+      gap: 7px;
+   }
+   .indicator {
+      width: 10px;
+      height: 10px;
+   }
+}
