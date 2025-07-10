@@ -24,7 +24,7 @@ const Footer = () => {
             <li>Home</li>
             <Link to='/about'> About Us</Link>
             <li> Delivery</li>
-            <Link to='/term&condi'> <a href="#">Privacy policy</a></Link>
+            <Link to='/term'> <a href="#">Privacy policy</a></Link>
          </ul>
       </div>
       <div className="footer-content-right">
