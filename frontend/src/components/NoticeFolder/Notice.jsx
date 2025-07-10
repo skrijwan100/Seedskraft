@@ -5,7 +5,7 @@ const Notice = ({ notices = [] }) => {
   const defaultNotices = [
     
     "New security policy update available",
-    
+    "Firtst Login yourSelf then order",
     "Please oder your seed one by one to avoid any confusion",
     "Add your seed to cart and then place your order",
   ];
