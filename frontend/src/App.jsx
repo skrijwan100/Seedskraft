@@ -10,6 +10,7 @@ import LoginPopup from './components/LoginPopupFolder/LoginPopup.jsx'
 import Userorder from "./components/orders/Userorder.jsx"
 import About from './pages/AboutFolder/About.jsx'
 import TermAndCondi from './components/T&C/TermAndCondi.jsx'
+import Category from './components/DisplayFolder/Category.jsx'
 const App = () => {
 
   const [showLogin,setShowlogin] = useState(false)
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/cart' element={<Cart/>} />
         <Route path='/order'element={<PlaceOrder/>}/>
         <Route path='/term'element={<TermAndCondi/>}/>
+        <Route path='/category'element={<Category/>}/>
 
         <Route path='/userorder'element={<Userorder/>}/>
       

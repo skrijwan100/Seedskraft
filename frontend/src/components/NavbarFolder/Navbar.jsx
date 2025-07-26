@@ -3,7 +3,9 @@ import './Navbar.css'
 import {assets} from '../../assets/assets'
 import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
+import { useLocation } from 'react-router';
 const Navbar = ({setShowlogin}) => {
+   const loction=useLocation()
    const [menu,setMenu] = useState("home");
    const {getTotalCartAmount,token,setToken}=useContext(StoreContext);
 
@@ -18,11 +20,11 @@ const Navbar = ({setShowlogin}) => {
     <div className='navbar'>
      <Link to='/'> <img src={assets.logo} alt="" className='logo' /></Link>
       <ul className="navbar-menu">
-         <Link  to='/' onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>Home</Link>
-         <Link  to='/about' onClick={()=>setMenu("about")} className={menu==="about"?"active":""}>About Us</Link>
-         <a  href='#explore-menu'  onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>Menu</a>
-         <a  href='#app-download' onClick={()=>setMenu("mobile-app")} className={menu==="mobile-app"?"active":""}>Mobile-app</a>
-         <a  href='#footer' onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</a>
+         <Link  to='/' onClick={()=>setMenu("home")} className={loction.pathname==="/"?"active":""}>Home</Link>
+         <Link  to='/about' onClick={()=>setMenu("about")} className={loction.pathname==="/about"?"active":""}>About Us</Link>
+         <a  href='#explore-menu' style={{cursor:"none"}} className={menu==="menu"?"active":""}>Menu</a>
+         <Link to="/category" onClick={()=>setMenu("mobile-app")} className={loction.pathname==="/category"?"active":""}>Category</Link>
+         <a  href='#footer' onClick={()=>setMenu("contact-us")} >Contact Us</a>
       </ul>
       <div className='navbar-right'>
          <img src={assets.search_icon} alt="" />
